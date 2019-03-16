@@ -16,7 +16,7 @@ fun headIs(list: Lst, value: Int): Lst =
     }
   }
 
-class AppTest {
+class LstTest {
   @Test fun `Lst can be empty`() {
     assertNotNull(Nil, "list should not be null")
   }
