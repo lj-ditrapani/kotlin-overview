@@ -14,3 +14,9 @@ dependencies {
 }
 
 mainClassName = 'Main'
+
+test {
+    testLogging {
+        events "passed", "started", "failed", "skipped"
+    }
+}
