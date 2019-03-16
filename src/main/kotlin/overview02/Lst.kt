@@ -1,10 +1,12 @@
 package overview02
 
+tailrec fun <B> _reduce(list: Lst, zero: B, f: (B, Int) -> B): B = when(list) {
+  is Nil -> zero
+  is Cons -> _reduce(list.tail, f(zero, list.head), f)
+}
+
 sealed class Lst {
-  tailrec fun <B> reduce(zero: B, f: (B, Int) -> B): B = when(this) {
-    is Nil -> zero
-    is Cons -> this.tail.reduce(f(zero, this.head), f)
-  }
+  fun <B> reduce(zero: B, f: (B, Int) -> B): B = _reduce(this, zero, f)
 }
 
 object Nil: Lst()
