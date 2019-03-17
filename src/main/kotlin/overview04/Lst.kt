@@ -1,14 +1,14 @@
 package overview04
 
-tailrec fun <A, B> _reduce(list: Lst<A>, zero: B, f: (B, A) -> B): B = when (list) {
+tailrec fun <A, B> fold(list: Lst<A>, zero: B, f: (B, A) -> B): B = when (list) {
     is Nil -> zero
-    is Cons -> _reduce(list.tail, f(zero, list.head), f)
+    is Cons -> fold(list.tail, f(zero, list.head), f)
 }
 
 sealed class Lst<out A> {
     abstract val isEmpty: Boolean
 
-    fun <B> reduce(zero: B, f: (B, A) -> B): B = _reduce(this, zero, f)
+    fun <B> reduce(zero: B, f: (B, A) -> B): B = fold(this, zero, f)
 
     fun <B> map(f: (A) -> B): Lst<B> =
     reverse().reduce<Lst<B>>(Nil) { acc, e -> Cons(f(e), acc) }

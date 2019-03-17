@@ -2,6 +2,7 @@ plugins {
     id 'org.jetbrains.kotlin.jvm' version '1.3.20'
     id 'application'
     id "org.jlleitschuh.gradle.ktlint" version "7.2.1"
+    id("io.gitlab.arturbosch.detekt").version("1.0.0-RC14")
 }
 
 repositories {
@@ -20,4 +21,10 @@ test {
     testLogging {
         events "passed", "started", "failed", "skipped"
     }
+}
+
+detekt {
+    toolVersion = "1.0.0-RC14"
+    input = files("src/main/kotlin")
+    filters = ".*/resources/.*,.*/build/.*"
 }
