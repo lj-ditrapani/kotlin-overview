@@ -1,7 +1,8 @@
 package overview04
 
 fun main() {
-  val list = newLst<Char>(*("Hello world from kotlin!".toCharArray().toTypedArray()))
+  val array = "Hello world from kotlin!".toCharArray().toTypedArray()
+  val list = newLst<Char>(*array)
   println(list.toString())
   println("List size: ${list.size()}")
   val list2 = list.map { x -> Integer.toHexString(x.toInt()) }
