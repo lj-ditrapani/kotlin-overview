@@ -13,7 +13,7 @@ dependencies {
     testImplementation 'org.jetbrains.kotlin:kotlin-test-junit'
 }
 
-mainClassName = 'Main'
+mainClassName = 'overview04.MainKt'
 
 test {
     testLogging {
