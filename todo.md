@@ -1,8 +1,8 @@
-- test for overview04
-- readme
+- Main code & assembly?
+    - main code/wrap up readme
 - formatting ktlint
 - linting detekt
 
-- maybe some other examples:
+- maybe some other examples?:
     - html builder
     - coroutines
