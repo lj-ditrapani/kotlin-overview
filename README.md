@@ -116,16 +116,16 @@ tests
 - use new newLst factory function
 
 
-Wrapping up
------------
+Building and running an application on the JVM
+----------------------------------------------
 
-- Look at main.scala
-- Splat sequence collection with `_*`
-- run `sbt assembly`; can now run resulting,
-  self-contained jar on any jvm, Java 6 or later.
-  `java -jar target/scala-2.12/scala-overview-assembly-0.1.jar`.
-- Option, Try, Either have similar implementations
-  (case classes, pattern-matching, type covariance)
+- Look at overview04/Main.kt
+- Splat Array with `*`
+- run `./gradlew assembleDist`;
+  creates zip and tar application files under build/distributions/
+- run `./gradlew installDist`;
+  unzips files into build/install/kotlin-overview.
+  Run as `./build/install/kotlin-overview/bin/kotlin-overview`.
 
 
 Resources

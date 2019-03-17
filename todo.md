@@ -1,5 +1,3 @@
-- Main code & assembly?
-    - main code/wrap up readme
 - formatting ktlint
 - linting detekt
 
