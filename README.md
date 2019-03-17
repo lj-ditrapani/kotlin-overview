@@ -144,3 +144,35 @@ or CFR (complete) or some other java decompiler.
 - CFR - a nice java decompiler <http://www.benf.org/other/cfr/> 
 
 <https://exercism.io> has a kotlin track.
+
+
+Develop this overview
+=====================
+
+Run tests
+
+    ./gradlew test
+
+Run tests and static analysis
+
+    ./gradlew check
+
+Format code
+
+    ./gradlew ktlintFormat
+
+Run static analysis
+
+    ./gradlew detekt
+
+Create zip and tar application files under build/distributions/
+
+    ./gradlew assembleDist
+
+Unzips dist files into build/install/kotlin-overview.
+
+    ./gradlew installDist
+
+Run main
+
+    ./build/install/kotlin-overview/bin/kotlin-overview
