@@ -18,7 +18,7 @@ sealed class Lst<out A> {
 
   fun size(): Int = reduce(0) { acc, e -> acc + 1 }
 
-  override fun toString(): String = reduce("Lst(") { acc, e -> "$acc$e "} + ")"
+  fun asString(): String = reduce("Lst( ") { acc, e -> "$acc$e "} + ")"
 }
 
 fun <A> newLst(vararg elems: A): Lst<A> =
