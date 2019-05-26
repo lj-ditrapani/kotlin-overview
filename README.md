@@ -149,7 +149,7 @@ or CFR (complete) or some other java decompiler.
 Part 2
 ======
 
-[Kotlin Overview Part 2](https://github.com/lj-ditrapani/kotlin-overview)
+[Kotlin Overview Part 2](https://github.com/lj-ditrapani/kotlin-overview-2)
 
 
 Develop this overview
