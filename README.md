@@ -146,6 +146,12 @@ or CFR (complete) or some other java decompiler.
 <https://exercism.io> has a kotlin track.
 
 
+Part 2
+======
+
+[Kotlin Overview Part 2](https://github.com/lj-ditrapani/kotlin-overview)
+
+
 Develop this overview
 =====================
 
