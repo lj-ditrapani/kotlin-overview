@@ -16,7 +16,7 @@ sealed class Lst<out A> {
     fun reverse(): Lst<A> =
     reduce<Lst<A>>(Nil) { acc, e -> Cons(e, acc) }
 
-    fun size(): Int = reduce(0) { acc, e -> acc + 1 }
+    fun size(): Int = reduce(0) { acc, _ -> acc + 1 }
 
     fun asString(): String = reduce("Lst( ") { acc, e -> "$acc$e " } + ")"
 }
