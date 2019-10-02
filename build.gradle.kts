@@ -1,8 +1,8 @@
 plugins {
-    kotlin("jvm").version("1.3.31")
+    kotlin("jvm").version("1.3.50")
     application
-    id("org.jlleitschuh.gradle.ktlint").version("8.0.0")
-    id("io.gitlab.arturbosch.detekt").version("1.0.0-RC14")
+    id("io.gitlab.arturbosch.detekt").version("1.0.1")
+    id("org.jlleitschuh.gradle.ktlint").version("8.2.0")
 }
 
 repositories {
@@ -26,7 +26,12 @@ tasks.test {
 }
 
 detekt {
-    toolVersion = "1.0.0-RC14"
+    toolVersion = "1.0.1"
     input = files("src/main/kotlin")
     filters = ".*/resources/.*,.*/build/.*"
+}
+
+ktlint {
+    version.set("0.34.2")
+    enableExperimentalRules.set(true)
 }
