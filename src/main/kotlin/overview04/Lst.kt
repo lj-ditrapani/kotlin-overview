@@ -11,10 +11,10 @@ sealed class Lst<out A> {
     fun <B> reduce(zero: B, f: (B, A) -> B): B = fold(this, zero, f)
 
     fun <B> map(f: (A) -> B): Lst<B> =
-    reverse().reduce<Lst<B>>(Nil) { acc, e -> Cons(f(e), acc) }
+        reverse().reduce<Lst<B>>(Nil) { acc, e -> Cons(f(e), acc) }
 
     fun reverse(): Lst<A> =
-    reduce<Lst<A>>(Nil) { acc, e -> Cons(e, acc) }
+        reduce<Lst<A>>(Nil) { acc, e -> Cons(e, acc) }
 
     fun size(): Int = reduce(0) { acc, _ -> acc + 1 }
 
@@ -22,7 +22,7 @@ sealed class Lst<out A> {
 }
 
 fun <A> newLst(vararg elems: A): Lst<A> =
-elems.reversed().fold<A, Lst<A>>(Nil) { acc, e -> Cons(e, acc) }
+    elems.reversed().fold<A, Lst<A>>(Nil) { acc, e -> Cons(e, acc) }
 
 data class Cons<A>(val head: A, val tail: Lst<A>) : Lst<A>() {
     override val isEmpty = false

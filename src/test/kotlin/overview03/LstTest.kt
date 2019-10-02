@@ -6,15 +6,15 @@ import kotlin.test.assertNotNull
 import kotlin.test.fail
 
 fun headIs(list: Lst<Int>, value: Int): Lst<Int> =
-when (list) {
-    is Cons -> {
-        assertEquals(list.head, value)
-        list.tail
+    when (list) {
+        is Cons -> {
+            assertEquals(list.head, value)
+            list.tail
+        }
+        is Nil -> {
+            fail("Empty list")
+        }
     }
-    is Nil -> {
-        fail("Empty list")
-    }
-}
 
 class LstTest {
     @Test fun `Lst can be empty`() {
